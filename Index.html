@@ -222,3 +222,13 @@ function toggleShape()
       else
         stage.style.webkitTransform = '';
     }
+function toggleBackfaces()
+    {
+      var backfacesVisible = document.getElementById('backfaces').checked;
+      var shape = document.getElementById('shape');
+      if (backfacesVisible)
+        addClassName(shape, 'backfaces');
+      else
+        removeClassName(shape, 'backfaces');
+    }
+  </script>
