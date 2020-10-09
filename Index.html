@@ -198,3 +198,10 @@ function removeClassName(inElement, inClassName)
             inElement.className = curClasses.replace(regExp, ' ');
         }
     }
+function toggleClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName))
+            removeClassName(inElement, inClassName);
+        else
+            addClassName(inElement, inClassName);
+    }
