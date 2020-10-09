@@ -190,3 +190,11 @@ function addClassName(inElement, inClassName)
         if (!hasClassName(inElement, inClassName))
             inElement.className = [inElement.className, inClassName].join(' ');
     }
+function removeClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName)) {
+            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+            var curClasses = inElement.className;
+            inElement.className = curClasses.replace(regExp, ' ');
+        }
+    }
