@@ -185,3 +185,8 @@
         var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
         return regExp.test(inElement.className);
     }
+function addClassName(inElement, inClassName)
+    {
+        if (!hasClassName(inElement, inClassName))
+            inElement.className = [inElement.className, inClassName].join(' ');
+    }
