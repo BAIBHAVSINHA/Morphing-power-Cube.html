@@ -39,16 +39,16 @@
      
     #shape
         {
-      position: relative;
-      top: 160px;
-      margin: 0 auto;
-      height: 200px;
-      width: 200px;
-      -webkit-transform-style: preserve-3d;
+        position: relative;
+        top: 160px;
+        margin: 0 auto;
+        height: 200px;
+        width: 200px;
+        -webkit-transform-style: preserve-3d;
         }
      
     .plane 
-    {
+        {
       position: absolute;
       height: 200px;
       width: 200px;
@@ -62,23 +62,23 @@
       background-color: rgba(255, 255, 255, 0.6);
       -webkit-transition: -webkit-transform 2s, opacity 2s;
       -webkit-backface-visibility: hidden;
-    }
+        }
      
     #shape.backfaces .plane 
-    {
+        {
       -webkit-backface-visibility: visible;
-    }
+        }
      
     #shape 
-    {
+        {
       -webkit-animation: spin 8s infinite linear;
-    }
+        }
      
     @-webkit-keyframes spin 
-    {
+        {
       from { -webkit-transform: rotateY(0); }
       to   { -webkit-transform: rotateY(-360deg); }
-    }
+        }
      
 /* ---------- cube styles ------------- */
     .cube > .one 
