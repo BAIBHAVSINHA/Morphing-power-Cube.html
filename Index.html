@@ -231,27 +231,27 @@
         {
             if (!hasClassName(inElement, inClassName))
             {
-            inElement.className = [inElement.className, inClassName].join(' ');
+                inElement.className = [inElement.className, inClassName].join(' ');
             }
         }
         function removeClassName(inElement, inClassName)
         {
             if (hasClassName(inElement, inClassName)) 
             {
-            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
-            var curClasses = inElement.className;
-            inElement.className = curClasses.replace(regExp, ' ');
+                var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+                var curClasses = inElement.className;
+                inElement.className = curClasses.replace(regExp, ' ');
             }
         }
         function toggleClassName(inElement, inClassName)
         {
             if (hasClassName(inElement, inClassName))
             {
-            removeClassName(inElement, inClassName);
+                removeClassName(inElement, inClassName);
             }
             else
             {
-            addClassName(inElement, inClassName);
+                addClassName(inElement, inClassName);
             }
         }
         function toggleShape()
@@ -259,23 +259,23 @@
             var shape = document.getElementById('shape');
             if (hasClassName(shape, 'ring')) 
             {
-            removeClassName(shape, 'ring');
-            addClassName(shape, 'cube');
+                removeClassName(shape, 'ring');
+                addClassName(shape, 'cube');
             } 
             else 
             {
-            removeClassName(shape, 'cube');
-            addClassName(shape, 'ring');
+                removeClassName(shape, 'cube');
+                addClassName(shape, 'ring');
             }
 // Move the ring back in Z so it's not so in-your-face.
             var stage = document.getElementById('stage');
             if (hasClassName(shape, 'ring'))
             {
-            stage.style.webkitTransform = 'translateZ(-200px)';
+                stage.style.webkitTransform = 'translateZ(-200px)';
             }
             else
             {
-            stage.style.webkitTransform = '';
+                stage.style.webkitTransform = '';
             }
         }
         function toggleBackfaces()
@@ -284,11 +284,11 @@
             var shape = document.getElementById('shape');
             if (backfacesVisible)
             {
-            addClassName(shape, 'backfaces');
+                addClassName(shape, 'backfaces');
             }
             else
             {
-            removeClassName(shape, 'backfaces');
+                removeClassName(shape, 'backfaces');
             }
         }
     </script>
